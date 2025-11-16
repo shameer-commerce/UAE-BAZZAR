@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/onr1ufd7e/Orange%20Black%20and%20White%20Minimalist%20Shop%20Logo%20(4)-Photoroom.png">
+    <title>Contact UAE BAZZAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* New requested background color */
+            --bg: #B86F3C; 
+            /* White for the form container */
+            --card: #ffffff; 
+            --primary: #000000;
+            --primary-hover: #333333;
+            --text: #000000;
+            --radius: 16px;
+        }
+        
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px; 
+            background: var(--bg) url('https://ik.imagekit.io/onr1ufd7e/Customer%20Onboarding%20Process%20Website.png') no-repeat center center fixed; 
+            background-size: cover;
+            user-select: none; /* Prevent selection */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Disable text selection globally */
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Enable selection for input fields */
+        input, textarea {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        .container {
+            width: 100%;
+            /* Compact size for all devices */
+            max-width: 500px; 
+            background: var(--card);
+            padding: 25px 30px; 
+            border-radius: var(--radius);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+            border: 1px solid #ddd; 
+            animation: fadeIn 0.7s ease;
+            position: relative; 
+            z-index: 10; 
+            overflow: hidden; 
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px; 
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        
+        form {
+            display: grid;
+            gap: 25px; 
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px; 
+        }
+        
+        label {
+            font-weight: 600;
+            margin-bottom: 5px; 
+            display: block;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px; 
+            margin-bottom: 0; 
+            border-radius: var(--radius);
+            border: 1px solid #ccc;
+            background: #ffffff; 
+            color: var(--text);
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+        }
+        
+        textarea {
+            height: 80px; 
+            resize: none;
+        }
+        
+        button {
+            padding: 12px; 
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 1px;
+            margin-top: 5px; 
+        }
+        
+        button:hover {
+            background: var(--primary-hover);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        
+        .redirecting {
+            animation: fadeOut 0.8s ease-out forwards;
+        }
+        
+        /* Responsive layout for all devices */
+        @media (max-width: 768px) {
+            .row {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+            
+            form {
+                gap: 20px; 
+            }
+            
+            .container {
+                padding: 20px 15px;
+                margin: 0;
+                width: 95%;
+                max-width: 100%; 
+            }
+            
+            .logo img {
+                max-width: 180px;
+            }
+            
+            h1 {
+                font-size: 1.5rem !important;
+                margin-bottom: 15px;
+            }
+            
+            input, textarea {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+            
+            label {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Extra compact for small phones */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px 12px;
+            }
+            
+            .logo img {
+                max-width: 160px;
+            }
+            
+            h1 {
+                font-size: 1.4rem !important;
+            }
+            
+            form {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/onr1ufd7e/Orange%20Black%20and%20White%20Minimalist%20Shop%20Logo%20(5)%20(1)-Photoroom.png" alt="UAE BAZZAR Logo">
+        </div>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Ensure you replace this access key with your actual Web3Forms key for production -->
+            <input type="hidden" name="access_key" value="a1628c10-10bb-4039-a60d-d83aeb2bd126">
+            
+            <div class="row">
+                <div>
+                    <label for="first_name">First Name *</label>
+                    <input type="text" id="first_name" name="first_name" required />
+                </div>
+                <div>
+                    <label for="middle_name">Middle Name *</label>
+                    <input type="text" id="middle_name" name="middle_name" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="last_name">Last Name *</label>
+                    <input type="text" id="last_name" name="last_name" required />
+                </div>
+                <div>
+                    <label for="customer_name">Customer Name *</label>
+                    <input type="text" id="customer_name" name="customer_name" required />
+                </div>
+            </div>
+
+            <!-- Single fields now use the form's vertical gap for separation -->
+            <div>
+                <label for="address">Address *</label>
+                <input type="text" id="address" name="address" required />
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" required />
+                </div>
+                <div>
+                    <label for="province">Province *</label>
+                    <input type="text" id="province" name="province" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="zip_code">ZIP Code *</label>
+                    <input type="text" id="zip_code" name="zip_code" required />
+                </div>
+                <div>
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+            </div>
+
+            <div>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+
+            <div>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+        <script>
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                // Store first and last name for thank you page
+                const firstName = document.getElementById('first_name').value || '';
+                const lastName = document.getElementById('last_name').value || '';
+                localStorage.setItem('firstName', firstName);
+                localStorage.setItem('lastName', lastName);
+                
+                // Add loading animation to button
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitButton.disabled = true;
+                
+                const formData = new FormData(form);
+                const xhr = new XMLHttpRequest();
+                
+                xhr.open('POST', form.action);
+                xhr.setRequestHeader('Accept', 'application/json');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                    
+                    if (xhr.status === 200) {
+                        // Add redirect animation
+                        document.body.classList.add('redirecting');
+                        setTimeout(() => {
+                            window.location.href = 'thankyou.html';
+                        }, 800);
+                    } else {
+                        alert('An error occurred. Please try again.');
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                    }
+                };
+                xhr.send(formData);
+            });
+        </script>
+    </div>
+</body>
+</html>
