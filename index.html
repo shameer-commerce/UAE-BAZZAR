@@ -10,8 +10,6 @@
         :root {
             /* New requested background color */
             --bg: #B86F3C; 
-            /* White for the form container */
-            --card: #ffffff; 
             --primary: #000000;
             --primary-hover: #333333;
             --text: #000000;
@@ -53,74 +51,71 @@
             user-select: text;
         }
 
+        /* Container styling */
         .container {
             width: 100%;
-            /* More compact and responsive size */
-            max-width: 450px; 
-            background: var(--card);
-            padding: 25px; 
-            border-radius: var(--radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #ddd; 
-            animation: fadeIn 0.5s ease;
-            position: relative; 
-            z-index: 10; 
-            overflow: hidden; 
+            max-width: 500px; /* Desktop width */
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 20px auto;
+            box-sizing: border-box;
         }
 
+        /* Logo */
         .logo {
             text-align: center;
             margin-bottom: 20px;
         }
 
         .logo img {
-            max-width: 200px;
+            max-width: 180px;
+            width: 100%;
             height: auto;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px; 
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #000;
-            letter-spacing: 1px;
-        }
-        
-        form {
-            display: grid;
-            gap: 20px; 
-        }
-        
-        /* Row flex layout */
+        /* Rows and input groups */
         .row {
             display: flex;
-            gap: 20px; /* Horizontal space between fields */
-            flex-wrap: wrap; /* Wrap on smaller screens */
-            margin-bottom: 15px; /* Space between rows */
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
         }
 
-        /* Input container */
         .input-group {
             display: flex;
             flex-direction: column;
-            flex: 1; /* Equal width for side-by-side inputs */
+            flex: 1;
         }
 
-        /* Full width fields (single column) */
         .input-group.full-width {
             flex: 100%;
         }
 
-        /* Input and textarea styling */
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: var(--radius);
-            border: 1px solid #ccc;
-            background: #fff;
+        /* Labels */
+        label {
+            margin-bottom: 5px;
+            font-weight: 600;
             font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* Inputs and textarea */
+        input, textarea {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 16px;
+            border: 1px solid #ccc;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
             transition: 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #000;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
 
         textarea {
@@ -128,41 +123,57 @@
             resize: none;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .row {
-                flex-direction: column; /* Stack fields on tablets and smaller */
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            input, textarea {
-                padding: 8px;
-                font-size: 0.9rem;
-            }
-
-            .container {
-                padding: 15px;
-            }
-        }
-        
+        /* Button */
         button {
-            padding: 12px; 
-            background: var(--primary);
-            color: #ffffff;
+            width: 100%;
+            padding: 12px;
             font-size: 1.1rem;
             font-weight: 700;
+            background: #000;
+            color: #fff;
             border: none;
-            border-radius: var(--radius);
+            border-radius: 16px;
             cursor: pointer;
-            transition: 0.25s;
-            letter-spacing: 1px;
-            margin-top: 5px; 
+            transition: 0.3s;
         }
-        
+
         button:hover {
-            background: var(--primary-hover);
+            background: #333;
+        }
+
+        /* Responsive Design */
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .input-group {
+                flex: 100%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            input, textarea {
+                padding: 10px;
+                font-size: 0.95rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 140px;
+            }
         }
         
         @keyframes fadeIn {
@@ -178,62 +189,6 @@
         .redirecting {
             animation: fadeOut 0.8s ease-out forwards;
         }
-        
-        /* Responsive layout for all devices */
-        @media (max-width: 768px) {
-            .row {
-                grid-template-columns: 1fr !important;
-                gap: 15px !important;
-            }
-            
-            form {
-                gap: 20px; 
-            }
-            
-            .container {
-                padding: 20px;
-                margin: 0;
-                width: 95%;
-                max-width: 100%; 
-            }
-            
-            .logo img {
-                max-width: 180px;
-            }
-            
-            input, textarea {
-                padding: 10px;
-                font-size: 1rem;
-            }
-            
-            label {
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Extra compact for small phones */
-        @media (max-width: 480px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .logo img {
-                max-width: 160px;
-            }
-            
-            form {
-                gap: 15px;
-            }
-            
-            input, textarea {
-                padding: 8px;
-                font-size: 0.95rem;
-            }
-            
-            label {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -245,15 +200,15 @@
         <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="a1628c10-10bb-4039-a60d-d83aeb2bd126">
 
-            <!-- First and Last Name Row -->
+            <!-- First and Last Name -->
             <div class="row">
                 <div class="input-group">
                     <label for="first_name">First Name *</label>
-                    <input type="text" id="first_name" name="first_name" required />
+                    <input type="text" id="first_name" name="first_name" required>
                 </div>
                 <div class="input-group">
                     <label for="last_name">Last Name *</label>
-                    <input type="text" id="last_name" name="last_name" required />
+                    <input type="text" id="last_name" name="last_name" required>
                 </div>
             </div>
 
@@ -261,7 +216,7 @@
             <div class="row">
                 <div class="input-group full-width">
                     <label for="address">Address *</label>
-                    <input type="text" id="address" name="address" required />
+                    <input type="text" id="address" name="address" required>
                 </div>
             </div>
 
@@ -269,7 +224,7 @@
             <div class="row">
                 <div class="input-group full-width">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required />
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
             </div>
 
@@ -277,7 +232,7 @@
             <div class="row">
                 <div class="input-group full-width">
                     <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required />
+                    <input type="email" id="email" name="email" required>
                 </div>
             </div>
 
@@ -291,47 +246,6 @@
 
             <button type="submit">Send Inquiry</button>
         </form>
-        <script>
-            const form = document.getElementById('contactForm');
-            
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                
-                // Store first and last name for thank you page
-                const firstName = document.getElementById('first_name').value || '';
-                const lastName = document.getElementById('last_name').value || '';
-                localStorage.setItem('firstName', firstName);
-                localStorage.setItem('lastName', lastName);
-                
-                // Add loading animation to button
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitButton.disabled = true;
-                
-                const formData = new FormData(form);
-                const xhr = new XMLHttpRequest();
-                
-                xhr.open('POST', form.action);
-                xhr.setRequestHeader('Accept', 'application/json');
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-                    
-                    if (xhr.status === 200) {
-                        // Add redirect animation
-                        document.body.classList.add('redirecting');
-                        setTimeout(() => {
-                            window.location.href = 'thankyou.html';
-                        }, 800);
-                    } else {
-                        alert('An error occurred. Please try again.');
-                        submitButton.innerHTML = originalText;
-                        submitButton.disabled = false;
-                    }
-                };
-                xhr.send(formData);
-            });
-        </script>
     </div>
 </body>
 </html>
